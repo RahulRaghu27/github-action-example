@@ -1,0 +1,14 @@
+name: Checkout repo
+on: push
+jobs:
+    Checkout_Stage:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Phase
+              uses: actions/checkout@v5.0.0
+            - name: List all files
+              run: |
+               echo "Hello ${{ github.ref_type}}"
+               ls -la
+
+            

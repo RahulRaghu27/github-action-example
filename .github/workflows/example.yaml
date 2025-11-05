@@ -1,10 +1,11 @@
 name: My Github Action
 
-on: push
+on:
+    push
 
 jobs:
     First-job:
         runs-on: ubuntu-latest
         steps:
             - name: Say hi Rahul
-              run: echo "Hello"
+              run: echo "Hello ${{ github.ref_type}}"
